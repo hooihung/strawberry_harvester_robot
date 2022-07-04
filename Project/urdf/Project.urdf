@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot name="Project">
+    <link name="world" />
+    <joint name="virtual_joint" type="fixed">
+        <parent link="world" />
+        <child link="base_link" />
+    </joint>
+    <link name="base_link">
+        
+<inertial>
+            <origin xyz="0.062583 0.062483 0.13321" rpy="0 0 0" />
+            <mass value="0.49045" />
+            <inertia ixx="0.00075934" ixy="-2.6667E-06" ixz="-2.3889E-08" iyy="0.0013344" iyz="-2.6966E-15" izz="0.00075873" />
+        </inertial>
+
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://Project/meshes/base_link.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.75294 0.75294 0.75294 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://Project/meshes/base_link.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="Link1">
+        
+<inertial>
+            <origin xyz="-0.0058004 0.043843 0.0069345" rpy="0 0 0" />
+            <mass value="0.17436" />
+            <inertia ixx="0.000183" ixy="1.9346E-05" ixz="-2.9916E-06" iyy="0.00011655" iyz="-2.3181E-05" izz="0.0001841" />
+        </inertial>
+
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://Project/meshes/Link1.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.75294 0.75294 0.75294 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://Project/meshes/Link1.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="joint1" type="revolute">
+        <origin xyz="0.063039 -0.13322 0.069861" rpy="1.5708 0 -0.010974" />
+        <parent link="base_link" />
+        <child link="Link1" />
+        <axis xyz="0 1 0" />
+        <limit lower="-1.57" upper="1.57" effort="1000" velocity="10" />
+    </joint>
+    <link name="link2">
+        
+<inertial>
+            <origin xyz="0.051494401274804 0.0280604795459832 0.0547249223492152" rpy="0 0 0" />
+            <mass value="0.150087546182137" />
+            <inertia ixx="0.000204815122201082" ixy="-4.35606900573083E-05" ixz="-0.000104126628840069" iyy="0.000242460808468939" iyz="-5.74021223085673E-05" izz="0.000155330262210845" />
+        </inertial>
+
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://Project/meshes/link2.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://Project/meshes/link2.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="joint2" type="revolute">
+        <origin xyz="0 0.0795 0" rpy="-0.16182 0.01582 0.19448" />
+        <parent link="Link1" />
+        <child link="link2" />
+        <axis xyz="0.64034 0 -0.76809" />
+        <limit lower="-1.57" upper="1.57" effort="1000" velocity="10" />
+    </joint>
+    <link name="link3">
+        
+<inertial>
+            <origin xyz="-0.00476318038871001 0.074849446227935 -0.00203016947462037" rpy="0 0 0" />
+            <mass value="0.130303869784293" />
+            <inertia ixx="0.00026871973384545" ixy="4.19854801617947E-05" ixz="-5.2338316445209E-06" iyy="5.31314299703242E-05" iyz="-2.81345733913792E-05" izz="0.000277166259506769" />
+        </inertial>
+
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://Project/meshes/link3.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://Project/meshes/link3.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="joint3" type="revolute">
+        <origin xyz="0.086273 0.042235 0.071924" rpy="0.87355 0.59791 -1.167" />
+        <parent link="link2" />
+        <child link="link3" />
+        <axis xyz="0.64034 0 -0.76809" />
+        <limit lower="-1.57" upper="1.57" effort="1000" velocity="10" />
+    </joint>
+    <link name="link4">
+        
+<inertial>
+            <origin xyz="0.0548157398392086 -0.0273785237972813 0.0380020224325275" rpy="0 0 0" />
+            <mass value="0.140077664719032" />
+            <inertia ixx="0.000216463472889513" ixy="8.27665845459747E-05" ixz="-0.000111272702923855" iyy="0.000345872989141308" iyz="6.92045015616449E-05" izz="0.000256530152085106" />
+        </inertial>
+
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://Project/meshes/link4.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://Project/meshes/link4.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="joint4" type="revolute">
+        <origin xyz="-0.0060927 0.11974 -0.0050793" rpy="-0.89787 0.64752 1.2168" />
+        <parent link="link3" />
+        <child link="link4" />
+        <axis xyz="0.64034 0 -0.76809" />
+        <limit lower="-1.57" upper="1.57" effort="1000" velocity="10" />
+    </joint>
+    <link name="link5">
+        
+<inertial>
+            <origin xyz="0.0406989665115545 0.0305863150536057 0.0260604660706744" rpy="0 0 0" />
+            <mass value="0.0629406277554816" />
+            <inertia ixx="5.43974028049776E-05" ixy="-7.10618358387144E-06" ixz="3.23725871457604E-06" iyy="8.29079946768035E-05" iyz="-6.03015468519842E-06" izz="5.29677790061506E-05" />
+        </inertial>
+
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://Project/meshes/link5.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://Project/meshes/link5.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="joint5" type="revolute">
+        <origin xyz="0.039754 0.00020207 0.033142" rpy="0.099835 0.0059943 -0.11984" />
+        <parent link="link4" />
+        <child link="link5" />
+        <axis xyz="0.64034 0 -0.76809" />
+        <limit lower="-1.57" upper="1.57" effort="1000" velocity="10" />
+    </joint>
+    
+<transmission name="trans_joint1">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="joint1">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="joint1_motor">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_joint2">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="joint2">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="joint2_motor">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_joint3">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="joint3">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="joint3_motor">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_joint4">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="joint4">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="joint4_motor">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_joint5">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="joint5">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="joint5_motor">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    
+    <gazebo>
+        <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+            <robotNamespace>/</robotNamespace>
+            <robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType>
+            <legacyModeNS>true</legacyModeNS>
+        </plugin>
+    </gazebo>
+</robot>
